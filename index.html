@@ -52,7 +52,97 @@
         </div>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section class="pt-5">
+        <article class="colorBanner pt-4">
+            <div class="container text-center py-4">
+                <h1 class="text-light">Ingresa aquí tus datos 😁<h1>
+            </div>
+        </article>
+      </section>
+      <section class="cuadro mt-3">
+        <article class="container border border-danger py-4 my-1">          
+          <form class="text-center">
+            <div class="row">
+              <label for="nombre" class="col-6 text-end">Nombre:</label>
+              <input
+              class="col-3"
+              id="nombre"
+              type="text"
+              placeholder="Ej: Juan"
+              maxlength="30"
+              minlength="5"
+              required
+              />
+            </div>
+            <div class="mt-2 row">
+              <label for="edad" class="col-6 text-end">Edad:</label>
+              <input
+              class="col-3"
+              id="edad"
+              type="number"
+              placeholder="Ej: 10"
+              maxlength="3"
+              minlength="1"
+              required
+              />
+            </div>
+            <div class="mt-2 row">
+              <label for="sexo" class="col-6 text-end">Sexo (H hombre, M mujer):</label>
+              <input
+              class="col-3"
+              id="sexo"
+              type="text"
+              placeholder="Ej: H"
+              maxlength="1"
+              minlength="1"
+              required
+            ></input>
+            </div>
+            <div class="mt-2 row">
+              <label for="peso" class="col-6 text-end">Peso (Kg):</label>
+              <input
+              class="col-3"
+              id="peso"
+              type="number"
+              placeholder="Ej: 45"
+              maxlength="3"
+              minlength="1"
+              required
+            ></input>
+            </div>
+            <div class="mt-2 row">
+              <label for="altura" class="col-6 text-end">Altura (m):</label>
+              <input
+              class="col-3"
+              id="altura"
+              type="number"
+              placeholder="Ej: 1.72"
+              maxlength="3"
+              minlength="3"
+              required
+              ></input>
+            </div>
+            <div class="mt-2 row">
+              <label for="nacimiento" class="col-6 text-end">Año de nacimiento:</label>
+              <input
+              class="col-3"
+              id="nacimiento"
+              type="number"
+              placeholder="Ej: 2001"
+              maxlength="4"
+              minlength="1"
+              required
+              ></input>
+            </div>
+        </form>
+        </article>
+        <article class="text-center my-3 articulo">
+          <button class="mx-2 btn btn-outline-danger" id="btnComenzar" onclick="">Mostrar Generación</button>
+          <button class="mx-2 btn btn-danger" id="btnComenzar" onclick="">Es mayor de edad?</button>
+        </article>
+    </section>
+    </main>
     <footer class="text-secondary fondoFooter">
       <div class="container py-4 text-center">
         <span class="text-light font-logo h4"
