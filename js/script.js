@@ -11,13 +11,13 @@ Luego crea la interfaz necesaria para que el usuario pueda crear un objeto perso
 
 class Persona {
     constructor(nombreParam, edadParam, dniParam, sexoParam, pesoParam, alturaParam, nacimientoParam) {
-        nombre = nombreParam;
-        edad = edadParam;
-        dni = dniParam;
-        sexo = sexoParam;
-        peso = pesoParam;
-        altura = alturaParam;
-        nacimiento = nacimientoParam;
+        this.nombre = nombreParam;
+        this.edad = edadParam;
+        this.dni = dniParam;
+        this.sexo = sexoParam;
+        this.peso = pesoParam;
+        this.altura = alturaParam;
+        this.nacimiento = nacimientoParam;
     }
     get mostrarGeneracion() {
         const n = this.nacimiento;
@@ -61,36 +61,41 @@ class Persona {
     }
 }
 
-
 const mostrar = (e) => {
-    // const nombre = document.getElementById("nombre");
-    // const dni = document.getElementById("dni");
-    // const edad = document.getElementById("edad");
-    // const sexo = document.getElementById("sexo");
-    // const peso = document.getElementById("peso");
-    // const altura = document.getElementById("altura");
-    // const nacimiento = document.getElementById("nacimiento");
-    // const yo = new Persona(`${nombre.value}`,`${edad.value}`,`${dni.value}`,`${sexo.value}`,`${peso.value}`,`${altura.value}`,`${nacimiento.value}`);
-    const alejo = new Persona("Alejo",24,43291627,"H",60,1.70,2001);
-    // console.log(nombre.value);
-    // console.log(dni.value);
-    // console.log(edad.value);
-    // console.log(sexo.value);
-    // console.log(peso.value);
-    // console.log(altura.value);
-    // console.log(nacimiento.value);
-
-    console.log(`Hola ${alejo.nombre}`);
-
     e.preventDefault();
     
-    // const enunciadoNuevo = document.createElement("h2");
-    // enunciadoNuevo.innerHTML = yo.mostrarGeneracion;
-    // const hola = yo.nombre;
-    // console.log(hola);
+    const nombre = document.getElementById("nombre");
+    const dni = document.getElementById("dni");
+    const edad = document.getElementById("edad");
+    const sexo = document.getElementById("sexo");
+    const peso = document.getElementById("peso");
+    const altura = document.getElementById("altura");
+    const nacimiento = document.getElementById("nacimiento");
+    const yo = new Persona(`${nombre.value}`,`${edad.value}`,`${dni.value}`,`${sexo.value}`,`${peso.value}`,`${altura.value}`,`${nacimiento.value}`);
+    
+    const enunciadoNuevo = document.createElement("h2");
+    enunciadoNuevo.innerHTML = yo.mostrarGeneracion;
+    enunciadoNuevo.className = "text-light text-center bg-danger my-2";
+    
+    const seccionInformacionExtra = document.getElementsByClassName("muestra");
+    seccionInformacionExtra[0].appendChild(enunciadoNuevo);
+}
 
+const mostrarEdad = () => {
+    const nombre = document.getElementById("nombre");
+    const dni = document.getElementById("dni");
+    const edad = document.getElementById("edad");
+    const sexo = document.getElementById("sexo");
+    const peso = document.getElementById("peso");
+    const altura = document.getElementById("altura");
+    const nacimiento = document.getElementById("nacimiento");
+    const yo = new Persona(`${nombre.value}`,`${edad.value}`,`${dni.value}`,`${sexo.value}`,`${peso.value}`,`${altura.value}`,`${nacimiento.value}`);
+
+    alert(yo.esMayorDeEdad);
 }
 
 const formMostrar = document.getElementById("formMostrar");
+const btnEdad = document.getElementById("btnEdad");
 
 formMostrar.addEventListener("submit",mostrar);
+btnEdad.addEventListener("click",mostrarEdad);
