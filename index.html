@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Una pagina en la cual le vamos a permitir al usuario divertirse mediante un juego en el cual debe adivinar un número mágico."
+      content="Voy a crear una página en la que el usuario va a poder ingresar sus datos, y la pagina le va indicar a qué generación pertenece."
     />
     <meta
       name="keywords"
-      content="numeros, numero mágico, adivinar, juego, diversion"
+      content="persona, generación, tabla de generación, taxonomía de generaciones, información personal"
     />
     <meta name="author" content="Facundo Alejo Herrera" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Número Mágico</title>
+    <title>Generaciones</title>
   </head>
   <body>
     <header class="position-fixed w-100 z-3 card-shadow">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
           <a class="navbar-brand font-logo fs-3" href="./index.html"
-            >Número Mágico ✨</a
+            >Generaciones 👶👨‍🦱👨‍🦳</a
           >
           <button
             class="navbar-toggler"
@@ -52,7 +52,114 @@
         </div>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section class="pt-5">
+        <article class="colorBanner pt-4">
+            <div class="container text-center py-4">
+                <h1 class="text-light">Ingresa aquí tus datos 😁<h1>
+            </div>
+        </article>
+      </section>
+      <section class="cuadro mt-3">
+        <article class="container border border-danger py-4 my-1">          
+          <form class="text-center" id="formMostrar">
+            <div class="row">
+              <label for="nombre" class="col-6 text-end">Nombre:</label>
+              <input
+              class="col-3"
+              id="nombre"
+              type="text"
+              placeholder="Ej: Juan"
+              maxlength="30"
+              minlength="5"
+              required
+              />
+            </div>
+            <div class="mt-2 row">
+              <label for="dni" class="col-6 text-end">DNI:</label>
+              <input
+              class="col-3"
+              id="dni"
+              type="number"
+              placeholder="Ej: 43291627"
+              maxlength="8"
+              minlength="7"
+              required
+              />
+            </div>
+            <div class="mt-2 row">
+              <label for="edad" class="col-6 text-end">Edad:</label>
+              <input
+              class="col-3"
+              id="edad"
+              type="number"
+              placeholder="Ej: 10"
+              maxlength="3"
+              minlength="1"
+              required
+              />
+            </div>
+            <div class="mt-2 row">
+              <label for="sexo" class="col-6 text-end">Sexo (H hombre, M mujer):</label>
+              <input
+              class="col-3"
+              id="sexo"
+              type="text"
+              placeholder="Ej: H"
+              maxlength="1"
+              minlength="1"
+              required
+            ></input>
+            </div>
+            <div class="mt-2 row">
+              <label for="peso" class="col-6 text-end">Peso (Kg):</label>
+              <input
+              class="col-3"
+              id="peso"
+              type="number"
+              placeholder="Ej: 45"
+              maxlength="3"
+              minlength="1"
+              required
+            ></input>
+            </div>
+            <div class="mt-2 row">
+              <label for="altura" class="col-6 text-end">Altura (m):</label>
+              <input
+              class="col-3"
+              id="altura"
+              type="text"
+              placeholder="Ej: 1.72"
+              maxlength="4"
+              minlength="4"
+              required
+              ></input>
+            </div>
+            <div class="mt-2 row">
+              <label for="nacimiento" class="col-6 text-end">Año de nacimiento:</label>
+              <input
+              class="col-3"
+              id="nacimiento"
+              type="number"
+              placeholder="Ej: 2001"
+              maxlength="4"
+              minlength="1"
+              required
+              ></input>
+            </div>
+            <!-- <div class="text-center mt-3">
+              <button class="mx-2 btn btn-outline-success" type="submit">Cargar Datos 😁</button>
+            </div> -->
+            <div class="text-center mt-3">
+              <button class="mx-2 btn btn-outline-danger" type="submit">Mostrar Generación</button>
+              <button class="mx-2 btn btn-danger" type="button" id="btnEdad" onclick="">Es mayor de edad?</button>
+            </div>
+          </form>
+        </article>
+        <article class="muestra container">
+        </article>
+    </section>
+    </main>
     <footer class="text-secondary fondoFooter">
       <div class="container py-4 text-center">
         <span class="text-light font-logo h4"
