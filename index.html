@@ -62,7 +62,7 @@
       </section>
       <section class="cuadro mt-3">
         <article class="container border border-danger py-4 my-1">          
-          <form class="text-center">
+          <form class="text-center" id="formMostrar">
             <div class="row">
               <label for="nombre" class="col-6 text-end">Nombre:</label>
               <input
@@ -72,6 +72,18 @@
               placeholder="Ej: Juan"
               maxlength="30"
               minlength="5"
+              required
+              />
+            </div>
+            <div class="mt-2 row">
+              <label for="dni" class="col-6 text-end">DNI:</label>
+              <input
+              class="col-3"
+              id="dni"
+              type="number"
+              placeholder="Ej: 43291627"
+              maxlength="8"
+              minlength="7"
               required
               />
             </div>
@@ -116,10 +128,10 @@
               <input
               class="col-3"
               id="altura"
-              type="number"
+              type="text"
               placeholder="Ej: 1.72"
-              maxlength="3"
-              minlength="3"
+              maxlength="4"
+              minlength="4"
               required
               ></input>
             </div>
@@ -135,11 +147,14 @@
               required
               ></input>
             </div>
-        </form>
-        </article>
-        <article class="text-center my-3 articulo">
-          <button class="mx-2 btn btn-outline-danger" id="btnComenzar" onclick="">Mostrar Generación</button>
-          <button class="mx-2 btn btn-danger" id="btnComenzar" onclick="">Es mayor de edad?</button>
+            <!-- <div class="text-center mt-3">
+              <button class="mx-2 btn btn-outline-success" type="submit">Cargar Datos 😁</button>
+            </div> -->
+            <div class="text-center mt-3">
+              <button class="mx-2 btn btn-outline-danger" type="submit">Mostrar Generación</button>
+              <button class="mx-2 btn btn-danger" type="button" id="btnComenzar" onclick="">Es mayor de edad?</button>
+            </div>
+          </form>
         </article>
     </section>
     </main>
